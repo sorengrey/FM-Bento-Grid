@@ -1,9 +1,4 @@
-// /** @type {import('tailwindcss').Config} */
 tailwind.config = {
-  // content: [
-  //   "./index.html", // Or wherever your HTML files are
-  //   // "./src/**/*.{html,js}", // If you're using a source folder
-  // ],
   theme: {
     extend: {
       fontFamily: {
