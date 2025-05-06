@@ -1,0 +1,25 @@
+{
+  "name": "fm-bento-grid",
+  "version": "1.0.0",
+  "description": "a frontend mentor challenge's solution",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sorengrey/FM-Bento-Grid.git"
+  },
+  "author": "Heather Smith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sorengrey/FM-Bento-Grid/issues"
+  },
+  "homepage": "https://github.com/sorengrey/FM-Bento-Grid#readme",
+  "dependencies": {
+    "@tailwindcss": "^4.1.5"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.1.5"
+  }
+}

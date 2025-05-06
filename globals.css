@@ -1,0 +1,80 @@
+/* @import "tailwindcss"; */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --background: #ffffff;
+  --foreground: #121212;
+} */
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-purple-100: oklch(0.88 0.0595 295.81);
+  --color-purple-500: oklch(0.55 0.2017 290.07);
+  --color-white: #FFFFFF;
+  --color-black: #121212;
+  --color-yellow-100: #F9EEE2;
+  --color-yellow-500: #FFCC6A;
+  --color-test: #ca264b;
+  --font-sans: var(--font-dm-sans);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #F6F5F6;
+  }
+}
+
+body {
+  color: var(--background);
+  background: var(--foreground);
+  font-family: 'DM Sans', Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("assets/fonts/DMSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("assets/fonts/DMSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: medium;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("assets/fonts/DMSans-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+/* Custom Styles */
+
+.text-preset-1 {
+  @apply font-medium tracking-[-3px]; 
+}
+
+.text-preset-2 {
+  @apply font-medium tracking-[-2px];
+}
+
+.text-preset-3 {
+  @apply font-medium tracking-[-2px];
+}
+
+.text-preset-4 {
+  @apply font-normal leading-[20px] tracking-[0px];
+}
+
+/* for the @YourCo image */
+.custom-shadow {
+  @apply shadow-[0_0_24px_0_rgba(98,26,123,0.05)]
+}
+

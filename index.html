@@ -3,13 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
     <meta
       name="Frontend Mentor Bento Grid"
       content="A challenge from Frontend Mentor, completed by Heather Smith"
     />
     <title>Bento Grid</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+    <link rel="stylesheet" href="./globals.css" />
+
     <link
       rel="icon"
       type="image/png"
@@ -17,7 +20,7 @@
       href="./assets/images/favicon-32x32.png"
     />
 
-    <title>Frontend Mentor | Bento grid</title>
+    <title>Frontend Mentor | Bento Grid</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
@@ -28,47 +31,57 @@
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
+      /* @theme {
+        --color-background: var(--background);
+        --color-foreground: var(--foreground);
+        --color-purple-100: oklch(0.88 0.0595 295.81);
+        --color-purple-500: oklch(0.55 0.2017 290.07);
+        --color-white: #ffffff;
+        --color-black: #121212;
+        --color-yellow-100: #f9eee2;
+        --color-yellow-500: #ffcc6a;
+        --color-test: #ca264b;
+        --font-sans: var(--font-dm-sans);
+      } */
     </style>
   </head>
   <body>
     <div
-      className="min-h-screen py-[32px] px-[16px] md:py-[50px] md:px-[40px] lg:pt-[83px] bg-[#F6F5F6]"
+      class="min-h-screen py-[32px] px-[16px] md:py-[50px] md:px-[40px] lg:pt-[83px] bg-[#F6F5F6]"
     >
       <div
-        className="grid grid-cols-1 lg:grid-cols-3 lg:grid-cols-[auto_544px_auto] lg:grid-rows-[auto-auto-auto] w-full md:max-w-[688px] lg:max-w-[1120px] lg:m-auto justify-items-center gap-[32px]"
+        class="grid grid-cols-1 lg:grid-cols-3 lg:grid-cols-[auto_544px_auto] lg:grid-rows-[auto-auto-auto] w-full md:max-w-[688px] lg:max-w-[1120px] lg:m-auto justify-items-center gap-[32px]"
       >
         <div
-          className="flex flex-col lg:col-start-2 lg:col-end-3 lg:max-h-[324px] text-preset-1 text-[46px] md:text-[54px] lg:text-[62px] leading-[42px] md:leading-[48px] lg:leading-[58px] py-[40px] md:py-[76px] px-[32px] md:px-[94px] lg:h-[544px] lg:p-[32px] lg:py-[64px] bg-purple-500 inline-block text-center justify-items-center rounded-[10px]"
+          class="flex flex-col lg:col-start-2 lg:col-end-3 lg:max-h-[324px] text-preset-1 text-[46px] md:text-[54px] lg:text-[62px] leading-[42px] md:leading-[48px] lg:leading-[58px] py-[40px] md:py-[76px] px-[32px] md:px-[94px] lg:h-[544px] lg:p-[32px] lg:py-[64px] bg-purple-500 inline-block text-center justify-items-center rounded-[10px]"
         >
-          <div className="md:max-w-[500px] lg:max-w-[480px]">
+          <div class="md:max-w-[500px] lg:max-w-[480px]">
             Social Media
-            <p className="flex text-yellow-500 inline">10x</p>
-            <i className="mr-[11px]"> Faster</i>with AI
-            <div className="mt-[24px] mb-[8px]">
+            <p class="flex text-yellow-500 inline">10x</p>
+            <i class="mr-[11px text-test"> Faster</i>with AI
+            <div class="mt-[24px] mb-[8px]">
               <image
                 src="/assets/images/illustration-five-stars.webp"
                 alt="five stars"
                 width="192"
                 height="32"
                 quality="{100}"
-                className="m-auto"
+                class="m-auto"
               />
             </div>
-            <p
-              className="text-[18px] leading-[20px] tracking-[0px] font-normal"
-            >
+            <p class="text-[18px] leading-[20px] tracking-[0px] font-normal">
               Over 4,000 5-star reviews
             </p>
           </div>
         </div>
         <div
-          className="w-full md:flex md:flex-row lg:col-start-2 lg-row-start-2 gap-[32px] lg:max-h-[247px] lg:max-w-[544px] lg:col-start-2 lg:row-start-2 lg:row-end-3"
+          class="w-full md:flex md:flex-row lg:col-start-2 lg-row-start-2 gap-[32px] lg:max-h-[247px] lg:max-w-[544px] lg:col-start-2 lg:row-start-2 lg:row-end-3"
         >
           <div
-            className="flex-1 flex flex-col p-[16px] md:p-[24px] md:justify-between md:max-w-[328px] md:overflow-hidden bg-white text-[26px] rounded-[10px] sm:mb-[32px] md:mb-[0px] lg:justify-between"
+            class="flex-1 flex flex-col p-[16px] md:p-[24px] md:justify-between md:max-w-[328px] md:overflow-hidden bg-white text-[26px] rounded-[10px] sm:mb-[32px] md:mb-[0px] lg:justify-between"
           >
             <div
-              className="flex max-w-[316px] md:w-[316px] md:h-[66px] custom-shadow rounded-[32px] "
+              class="flex max-w-[316px] md:w-[316px] md:h-[66px] custom-shadow rounded-[32px]"
             >
               <image
                 src="/assets/images/illustration-multiple-platforms.webp"
@@ -76,21 +89,21 @@
                 width="{317}"
                 height="{67}"
                 quality="{100}"
-                className="max-w-[316px] md:w-[316px] md:h-[66px] rounded-[32px]"
+                class="max-w-[316px] md:w-[316px] md:h-[66px] rounded-[32px]"
               />
             </div>
             <p
-              className="text-[26px] tracking-[-0.06em] leading-[24px] md:text-[28px] lg:text-[32px] mt-[16px] md:mt-[0px] md:max-w-[208px] text-black text-preset-3 md:leading-[26px] lg:leading-[28px] md:tracking-[-0.06em] lg:tracking-[2px]"
+              class="text-[26px] tracking-[-0.06em] leading-[24px] md:text-[28px] lg:text-[32px] mt-[16px] md:mt-[0px] md:max-w-[208px] text-black text-preset-3 md:leading-[26px] lg:leading-[28px] md:tracking-[-0.06em] lg:tracking-[2px]"
             >
               Manage multiple accounts and platforms.
             </p>
           </div>
 
           <div
-            className="flex flex-col flex-1 bg-yellow-500 rounded-[10px] pt-[16px] px-[16px] w-full text-preset-3 text-black text-[26px] tracking-[-0.06em] leading-[24px] md:text-[28px] lg:text-[32px] lg:leading-[28px] mt-[32px] md:mt-[0px] md:pt-[24px] md:px-[24px] md:tracking-[-0.06em] md:leading-[26px]"
+            class="flex flex-col flex-1 bg-yellow-500 rounded-[10px] pt-[16px] px-[16px] w-full text-preset-3 text-black text-[26px] tracking-[-0.06em] leading-[24px] md:text-[28px] lg:text-[32px] lg:leading-[28px] mt-[32px] md:mt-[0px] md:pt-[24px] md:px-[24px] md:tracking-[-0.06em] md:leading-[26px]"
           >
             <p>Maintain a consistent posting schedule.</p>
-            <div className="h-[157px] w-[208px] pt-[16px] overflow-hidden">
+            <div class="h-[157px] w-[208px] pt-[16px] overflow-hidden">
               <image
                 src="/assets/images/illustration-consistent-schedule.webp"
                 alt="calendar showing days checked off"
@@ -103,28 +116,26 @@
         </div>
 
         <div
-          className="bg-purple-100 rounded-[10px] py-[32px] text-black text-center justify-items-center lg:justify-items-start lg:w-auto px-[32px] lg:col-start-3 lg:row-start-1 lg:row-end-3 lg:max-w-[256px] lg:max-h-[603px] lg:mr-auto overflow-hidden lg:relative md:w-full"
+          class="bg-purple-100 rounded-[10px] py-[32px] text-black text-center justify-items-center lg:justify-items-start lg:w-auto px-[32px] lg:col-start-3 lg:row-start-1 lg:row-end-3 lg:max-w-[256px] lg:max-h-[603px] lg:mr-auto overflow-hidden lg:relative md:w-full"
         >
           <p
-            className="text-preset-3 mb-[24px] text-[24px] tracking-[-0.06em] leading-[24px] md:text-[28px] lg:text-[32px] lg:leading-[28px] lg:text-left"
+            class="text-preset-3 mb-[24px] text-[24px] tracking-[-0.06em] leading-[24px] md:text-[28px] lg:text-[32px] lg:leading-[28px] lg:text-left"
           >
             Schedule to social media.
           </p>
 
-          <div
-            className="lg:w-[356px] lg:h-[318px] overflow-hidden lg:relative"
-          >
+          <div class="lg:w-[356px] lg:h-[318px] overflow-hidden lg:relative">
             <image
               src="/assets/images/illustration-schedule-posts.webp"
               alt="graph showing best times to post"
               width="{356}"
               height="{318}"
               quality="{100}"
-              className="lg:absolute lg:left-0 lg:top-0"
+              class="lg:absolute lg:left-0 lg:top-0"
             />
           </div>
           <p
-            className="text-preset-4 text-[18px] lg:text-[20px] mt-[24px] text-center lg:text-left md:max-w-[355px]"
+            class="text-preset-4 text-[18px] lg:text-[20px] mt-[24px] text-center lg:text-left md:max-w-[355px]"
           >
             Optimize post timings to publish content at the perfect time for
             your audience.
@@ -132,17 +143,17 @@
         </div>
 
         <div
-          className="lg:col-start-1 lg:col-end-4 lg:row-start-3 flex flex-col lg:flex-row gap-[32px] w-full"
+          class="lg:col-start-1 lg:col-end-4 lg:row-start-3 flex flex-col lg:flex-row gap-[32px] w-full"
         >
           <div
-            className="bg-white rounded-[10px] p-[24px] text-black w-full md:flex lg:flex-col md:justify-between lg:max-w-[256px] lg:mb-auto lg:ml-auto lg:h-[246px] md:order-2 lg:order-1"
+            class="bg-white rounded-[10px] p-[24px] text-black w-full md:flex lg:flex-col md:justify-between lg:max-w-[256px] lg:mb-auto lg:ml-auto lg:h-[246px] md:order-2 lg:order-1"
           >
             <div
-              className="text-[46px] md:text-[54px] md:tracking-[-0.04em] lg:text-[58px] font-medium leading-[42px] md:leading-[48px] tracking-[-0.085em]"
+              class="text-[46px] md:text-[54px] md:tracking-[-0.04em] lg:text-[58px] font-medium leading-[42px] md:leading-[48px] tracking-[-0.085em]"
             >
               <span>&gt;</span>56%
               <p
-                className="pt-[15px] md:mt-[0px] mb-[24px] md:mb-[0px] text-preset-4 text-[18px] md:[text-20px] leading-[20px] tracking-[0]"
+                class="pt-[15px] md:mt-[0px] mb-[24px] md:mb-[0px] text-preset-4 text-[18px] md:[text-20px] leading-[20px] tracking-[0]"
               >
                 faster audience growth
               </p>
@@ -159,9 +170,9 @@
           </div>
 
           <div
-            className="bg-purple-500 rounded-[10px] p-[24px] text-preset-3 w-full flex flex-col md:flex-row justify-center lg:justify-between items-center md:gap-[40px] lg:gap-[0px] text-center lg:max-w-[544px]  lg:order-2"
+            class="bg-purple-500 rounded-[10px] p-[24px] text-preset-3 w-full flex flex-col md:flex-row justify-center lg:justify-between items-center md:gap-[40px] lg:gap-[0px] text-center lg:max-w-[544px] lg:order-2"
           >
-            <div className="flex justify-center md:w-[227px] md:h-[200px]">
+            <div class="flex justify-center md:w-[227px] md:h-[200px]">
               <image
                 src="/assets/images/illustration-grow-followers.webp"
                 alt="follower growth chart"
@@ -171,7 +182,7 @@
               />
             </div>
             <div
-              className="text-[32px] leading-[28px] tracking-[-0.06em] md:text-[36px] lg:text-[36px] lg:tracking-[-2px] lg:leading-[36px] text-center md:text-left text-preset-2 md:leading-[30px] md:tracking-[-0.06em] mt-[40px] md:mt-[0px] max-w-[257px] lg:pt-[24px] md:pt-[0px] order-2"
+              class="text-[32px] leading-[28px] tracking-[-0.06em] md:text-[36px] lg:text-[36px] lg:tracking-[-2px] lg:leading-[36px] text-center md:text-left text-preset-2 md:leading-[30px] md:tracking-[-0.06em] mt-[40px] md:mt-[0px] max-w-[257px] lg:pt-[24px] md:pt-[0px] order-2"
             >
               Grow followers with non-stop content.
             </div>
@@ -179,15 +190,15 @@
         </div>
 
         <div
-          className="md:flex md:flex-row gap-[32px] lg:flex-col lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3 md:max-h-[354px] lg:h-[881px]"
+          class="md:flex md:flex-row gap-[32px] lg:flex-col lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3 md:max-h-[354px] lg:h-[881px]"
         >
           <div
-            className="flex flex-col justify-center md:max-w-[328px] lg:max-w-[256px] lg:min-h-[415px] bg-yellow-100 rounded-[10px] p-[32px] text-black text-[30px] leading-[28px] md:leading-[30px] lg:leading-[36px] md:text-[30px] text-preset-2 lg:text-[40px] w-full lg:w-auto mb-[32px] md:tracking:[-0.06em] md:mb-[0px] lg:gap-[24px]"
+            class="flex flex-col justify-center md:max-w-[328px] lg:max-w-[256px] lg:min-h-[415px] bg-yellow-100 rounded-[10px] p-[32px] text-black text-[30px] leading-[28px] md:leading-[30px] lg:leading-[36px] md:text-[30px] text-preset-2 lg:text-[40px] w-full lg:w-auto mb-[32px] md:tracking:[-0.06em] md:mb-[0px] lg:gap-[24px]"
           >
             <div>
               Create and schedule content
               <div
-                className="text-purple-500 inline md:leading-[30px] tracking-[-0.07em]"
+                class="text-purple-500 inline md:leading-[30px] tracking-[-0.07em]"
               >
                 <i> quicker.</i>
               </div>
@@ -198,15 +209,15 @@
               width="191"
               height="91"
               quality="{100}"
-              className="mt-[24px]"
+              class="mt-[24px]"
             />
           </div>
 
           <div
-            className="lg:flex lg:flex-col lg:justify-between bg-yellow-500 rounded-[10px] p-[24px] text-black w-full text-[32px] md:text-[36px] lg:w-[256px] lg:min-h-[434px]"
+            class="lg:flex lg:flex-col lg:justify-between bg-yellow-500 rounded-[10px] p-[24px] text-black w-full text-[32px] md:text-[36px] lg:w-[256px] lg:min-h-[434px]"
           >
             <p
-              className="mb-[24px] lg:mb-[0px] text-preset-2 leading-[28px] md:leading-[30px] md:tracking-[-0.06em] lg:leading-[36px] lg:tracking-[-2px] md:text-[30px] lg:text-[40px] font-medium "
+              class="mb-[24px] lg:mb-[0px] text-preset-2 leading-[28px] md:leading-[30px] md:tracking-[-0.06em] lg:leading-[36px] lg:tracking-[-2px] md:text-[30px] lg:text-[40px] font-medium"
             >
               Write your content using AI.
             </p>
@@ -216,17 +227,17 @@
               width="220"
               height="223"
               quality="{100}"
-              className="md:h-[220px] md:w-[223px] lg:h-[223px] lg:l-[220px]"
+              class="md:h-[220px] md:w-[223px] lg:h-[223px] lg:l-[220px]"
             />
           </div>
         </div>
       </div>
     </div>
 
-    <div class="attribution">
+    <!-- <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
       Coded by <a href="#">Heather Smith</a>.
-    </div>
+    </div> -->
   </body>
 </html>
