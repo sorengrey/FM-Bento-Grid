@@ -15,8 +15,6 @@
 }
 
 body {
-  color: var(--background);
-  background: var(--foreground);
   font-family: 'DM Sans', Helvetica, sans-serif;
 }
 
